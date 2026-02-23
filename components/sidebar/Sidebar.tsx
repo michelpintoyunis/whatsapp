@@ -94,7 +94,7 @@ export default function Sidebar({ className = '' }: { className?: string }) {
               <div className="flex-1 border-b border-wa-border py-3 flex flex-col justify-center pr-4">
                 <div className="flex justify-between items-baseline mb-1">
                   <span className="text-wa-text-primary text-[16px] truncate pr-2">{chat.group_name || target?.username || 'Unknown'}</span>
-                  <span className={`text-[12px] shrink-0 ${chat.unread_count && chat.unread_count > 0 ? 'text-wa-primary font-medium' : 'text-wa-text-secondary'}`}>
+                  <span suppressHydrationWarning className={`text-[12px] shrink-0 ${chat.unread_count && chat.unread_count > 0 ? 'text-wa-primary font-medium' : 'text-wa-text-secondary'}`}>
                     {chat.last_message ? new Date(chat.last_message.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : ''}
                   </span>
                 </div>

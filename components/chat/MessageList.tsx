@@ -148,7 +148,7 @@ export default function MessageList({ chatId }: { chatId: string }) {
                 )}
                 
                 <div className={`float-right flex items-center gap-1 ml-3 mt-1 h-[15px]`}>
-                  <span className="text-[11px] text-wa-text-secondary leading-[15px]">
+                  <span suppressHydrationWarning className="text-[11px] text-wa-text-secondary leading-[15px]">
                     {new Date(msg.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                   </span>
                   {isLocal && (
