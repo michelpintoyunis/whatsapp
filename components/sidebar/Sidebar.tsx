@@ -99,7 +99,7 @@ export default function Sidebar({ className = '' }: { className?: string }) {
                   </span>
                 </div>
                 <div className="flex justify-between items-center relative">
-                  <span className={`text-[13px] truncate pr-4 ${isTargetTyping ? 'text-wa-primary font-medium' : 'text-wa-text-secondary'}`}>
+                  <div className={`text-[13px] truncate pr-4 ${isTargetTyping ? 'text-wa-primary font-medium' : 'text-wa-text-secondary'}`}>
                     {isTargetTyping ? (
                       <div className="flex items-center gap-1">
                         <span className="italic">typing</span>
@@ -115,7 +115,7 @@ export default function Sidebar({ className = '' }: { className?: string }) {
                         {chat.last_message ? chat.last_message.encrypted_content : 'No messages yet'}
                       </>
                     )}
-                  </span>
+                  </div>
                   
                   <div className="flex items-center gap-2 shrink-0 h-5">
                     {/* Delete chat button (shows on hover) */}
